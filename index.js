@@ -4,6 +4,8 @@ const puppeteer = require("puppeteer");
 const app = express();
 app.use(express.json());
 
+const { executablePath } = require("puppeteer"); // Added for dynamic Chromium path
+
 const PORT = process.env.PORT || 3000;
 const webhookUrl = "https://hook.eu2.make.com/u5nslby643au44g3hftd1tesa3hitdsj";
 const targetSelector = "div[id^='primis_playerSekindoSPlayer']";
@@ -20,6 +22,7 @@ app.post("/", async (req, res) => {
   try {
     browser = await puppeteer.launch({
       headless: "new",
+      executablePath: executablePath(),
       args: ["--no-sandbox", "--disable-setuid-sandbox"]
     });
 
