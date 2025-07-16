@@ -1,0 +1,17 @@
+{
+  "name": "z-index-scenario-test",
+  "version": "1.0.0",
+  "description": "Node.js + Puppeteer API for z-index inspection",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "npx puppeteer install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^21.3.8"
+  }
+}
