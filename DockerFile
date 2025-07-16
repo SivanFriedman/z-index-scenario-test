@@ -1,0 +1,22 @@
+# Use official Node image
+FROM node:20
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# Copy files
+COPY package*.json ./
+COPY index.js ./
+
+# Install dependencies (skip optional Chromium download here)
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+RUN npm install
+
+# Install Chromium manually
+RUN npx puppeteer install
+
+# Expose port
+EXPOSE 3000
+
+# Start the app
+CMD [ "npm", "start" ]
