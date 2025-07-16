@@ -1,7 +1,7 @@
 {
   "name": "z-index-scenario-test",
   "version": "1.0.0",
-  "description": "Node.js + Puppeteer API for z-index inspection",
+  "description": "Puppeteer + Express server to inspect z-index conflicts and report via Make webhook",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,9 +9,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
-    "puppeteer": "^21.3.8"
+    "puppeteer": "21.3.8"
   }
 }
